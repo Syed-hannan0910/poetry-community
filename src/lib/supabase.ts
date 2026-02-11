@@ -1,12 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
 
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-// ADD THESE TWO LINES FOR TESTING
-console.log("URL Check:", supabaseUrl);
-console.log("Key Check:", supabaseAnonKey ? "Found (Starts with " + supabaseAnonKey.substring(0,5) + ")" : "NOT FOUND");
-
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export interface Profile {
@@ -77,6 +70,3 @@ export interface Enrollment {
   enrolled_at: string;
   completed: boolean;
 }
-
-
-
